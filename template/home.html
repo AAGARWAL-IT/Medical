@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+<title>Home</title>
+<!-- CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+</head>
+    <style>
+    body {
+        background: url("https://imgur.com/hce1t3O.jpg") no-repeat center center fixed;
+         color : #010005;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }#main-footer
+    {
+      color: #FFFFFF;
+      font-family: "Segoe UI";
+      background: #2B2B2B;
+      text-align: center;
+      margin-top: 250px;
+      padding: 10px;
+      bottom: 0px;
+    }
+  
+    </style>
+<body>
+
+  <header class="site-header">
+  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+    <div class="container">
+
+     
+
+      <a class="navbar-brand mr-4" href="/">Medical app</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+         <a class="nav-item nav-link" href="/covid">Corona</a>
+          <a class="nav-item nav-link" href="/cancer">Cancer</a>
+          <a class="nav-item nav-link" href="/diabetes">Diabetes</a>
+          <a class="nav-item nav-link" href="/heart">Heart</a>
+          <a class="nav-item nav-link" href="/liver">Liver</a>
+          <a class="nav-item nav-link" href="/kidney">Kidney</a>
+           <a class="nav-item nav-link" href="/Malaria">Malaria</a>
+           <a class="nav-item nav-link" href="/Pneumonia">Pneumonia</a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <div class= "container">
+
+     <div class="col-md-8">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          {% block content %}{% endblock %}
+  </div>
+      <h3> Hi, Anjali here 👋 </h3>
+    
+      <br>
+          
+      
+         <h3> <i>I have made a Medical Web App using Machine Learning and Deep Learning 💻</i> </h3>
+         <hr>
+         <br>
+         <h3>Overview</h3>
+      <p>Web health applications are increasingly being used to perform tasks that are conventionally performed by general practitioners (GPs), such as those involved in promoting health, preventing disease, diagnosis, treatment, monitoring, and support for health services. Nowadays, medical checkups are very expensive and not everyone is capable to undergo such unaffordable tests, so to cope up with all of these problems this app is designed which would prove its benefits upto much extent.
+        This web app is built using Machine Learning and Deep Learning which can predict the results of Seven Major Health issues which are very common and just by entering the required information, we can know whether a person is suffering from these mentioned diseases or not.</p>
+        <hr>
+        
+    </p>
+    <h3>Application</h3>
+    <br>
+    <ul>
+      <li>This app can reach large numbers of people and is not limited by borders.</li>
+      <li>To extend our hands to those needy people who cannot afford to undergo such expensive tests.</li>
+      <li>To apply the upcoming technologies in a right way so that we can contribute to our society.</li>
+      <li>One can monitor their health personally</li>
+      <li>It is a blessing for people from far remote areas</li>
+    </ul>
+      <br>
+      
+      <hr>
+<h5> For any queries, contact - 💬 aagarwal691@gmail.com</h5>
+
+
+
+  </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+<footer id="main-footer">
+      Anjali Agarwal 😄
+              <p class = "text-center text-light"> <a target="_blank" href="https://github.com/ANJALIAGARWAL-IT"><i class="fab fa-github fa-lg contact-icon"></i></a>
+         <a target="_blank" href="https://in.linkedin.com/in/anjaliagarwal98"><i class="fab fa-linkedin fa-lg contact-icon"></i></a></p>
+    </footer>
+</body>
+</html>
